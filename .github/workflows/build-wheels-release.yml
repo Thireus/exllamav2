@@ -157,7 +157,7 @@ jobs:
           $cudaVersion = '${{ matrix.cuda }}'
           $cudaVersionPytorch = '${{ matrix.cuda }}'.Remove('${{ matrix.cuda }}'.LastIndexOf('.')).Replace('.','')
           Write-Output "CUDA_VERSION_PYTORCH=$cudaVersionPytorch" >> "$env:GITHUB_OUTPUT"
-          $pytorchIndexUrl = "https://download.pytorch.org/whl/cu$cudaVersionPytorch"
+          $pytorchIndexUrl = "https://download.pytorch.org/whl/nightly/cu$cudaVersionPytorch"
 
           uv pip install torch==${{ matrix.torch }} --index-url $pytorchIndexUrl
           uv pip install --upgrade build setuptools==69.5.1 wheel packaging ninja safetensors sentencepiece tokenizers numpy
