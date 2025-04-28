@@ -13,6 +13,5 @@ numpy~=1.26.4
 tokenizers
 rich
 pillow>=9.1.0
-
 --index-url https://download.pytorch.org/whl/nightly/cu128
 torch
